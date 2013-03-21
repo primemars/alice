@@ -13,3 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+$('#remote_form').bind('ajax:success', function(){
+    alert("Success!");
+});
