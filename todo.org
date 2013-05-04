@@ -1,0 +1,8 @@
+#+SEQ_TODO: TODO WAITING DONE
+(load-file "tools.el")
+
+* TODO Implment the home page
+* TODO Improve the result of find
+* TODO Implement the 小学分级阅读标准核心
+* TODO Small change on the other pages
+* TODO Deploy the code in the public server
