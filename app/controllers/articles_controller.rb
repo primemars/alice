@@ -1,13 +1,9 @@
 class ArticlesController < ApplicationController
-
+  
   def create
-    # article = Article.create(params[:article])
-    # percentage = article.grade
-    # @text = "#{article.filename}: #{percentage}%"
-    @text ='aca'
+    @article = Article.create(params[:article]).grade
     respond_to do |format|
-      #format.html {render :text => @text}
-      format.js
+      format.js {render :layout => false}
     end
 
   end

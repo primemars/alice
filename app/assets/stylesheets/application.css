@@ -65,6 +65,8 @@ table {
 .center {
     margin:auto;
 }
+.tl {text-align: left;}
 .tc {text-align: center;}
 .vc {vertical-align:middle}
 .mt20 {margin-top:20px}
+.mt10 {margin-top:10px}

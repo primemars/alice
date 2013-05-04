@@ -1,16 +1,18 @@
 <div id="main">
-  <div id='board' class='center tc'>
-    <p class='hint center'>找到小朋友的书</p>
+  <div id='board' class='center tl'>
+    <div class='hint tl'>
+      <p>1.选择您需要查询的文章</p>
+      <p>2.点击按钮查看结果</p>
+    </div>
 
     <%= form_for @article, :remote => true, :id => 'remote_form', :url => articles_path, :html => { :multipart => true } do |form| %>
     <p>
-      <label for="upload_file"></label>
       <%= form.file_field :avatar %>
-    </p>
-    <p class='mt20'>
-      <%= submit_tag "查查看", :class => 'button' %>
+      <%= submit_tag "查查看", :class => 'button', :onclick => 'return upload_article();' %>
     </p>
     <% end %>
-    <div id='result'></div>
+    <div id='result' class='mt20'></div>
   </div>
 </div>
+
+
