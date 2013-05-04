@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.remotipart
+//= require bootstrap
 //= require_tree .
-$('#remote_form').bind('ajax:success', function(){
-    alert("Success!");
-});
+

@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 require 'iconv'
-require 'rchardet'
 
 class Grader
   IGNORE_CHARS = [' ', '，', '。', '！', '…', '_', '、', '；']
