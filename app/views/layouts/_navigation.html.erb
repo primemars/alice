@@ -1,34 +1,31 @@
 <div class="navbar">
-  <a class="brand" href="#">首页</a>
+  <%= link_to '首页', root_path, :class => 'brand'  %>
   <ul class="nav nav-pills nav-stacked">
-    <li class="dropdown">
+    <li <% if @active_find-%> class='active' <% end -%>>
+      <%= link_to '找到一本适合孩子读的书', root_path  %>
+    </li>
+    <li <% if @active_importance-%> class='active' <% end -%>>
+      <%= link_to '阅读的重要性', '/importance' %>
+    </li>
+    <li class="dropdown <% if @active_standard-%> active <% end -%>" >
       <a class="dropdown-toggle"
 	 data-toggle="dropdown"
 	 href="#">
-	关于小学阅读分级标准
+	小学阅读分级标准
 	<b class="caret"></b>
       </a>
       <ul class="dropdown-menu">
-	<li>
-	  <%= link_to '阅读的重要性', '/importance' %>
-	</li>
 	<li>
 	  <%= link_to '介绍', '/introduction' %>
 	</li>
 	<li>
 	  <%= link_to '优点', '/advantage' %>
 	</li>
+	<li>
+	  <%= link_to('核心') %>
+	</li>
       </ul>
     </li>
-    <li class="active">
-      <%= link_to('找到一本适合孩子读的书')  %>
-    </li>
-    <li>
-      <%= link_to('核心') %>
-    </li>
-    <li>
-      <%= link_to('小学阅读分级标准培训')  %>
-    </li>
-  </ul>
 
+  </ul>
 </div>
