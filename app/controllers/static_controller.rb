@@ -1,4 +1,8 @@
 class StaticController < ApplicationController
+  def show_home
+    @active_home = true
+  end
+  
   def show_importance
     @active_importance = true
   end

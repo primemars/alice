@@ -1,13 +1,15 @@
 <div id="main">
+  <div id='msg' class="alert alert-error hide">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>请上传txt格式的文章</strong> 
+  </div>
   <div id='board' class='center tl'>
-    <div class='hint tl'>
-      <p>1.选择您需要查询的文章</p>
-      <p>2.点击按钮查看结果</p>
-    </div>
+
+    <div class='hint tl'></div>
 
     <%= form_for @article, :remote => true, :id => 'remote_form', :url => articles_path, :html => { :multipart => true } do |form| %>
     <p>
-      <%= form.file_field :avatar %>
+      <%= form.file_field :avatar, :title => '点击上传您要查询的文章' %>
       <%= submit_tag "查查看", :class => 'button', :onclick => 'return upload_article();' %>
     </p>
     <% end %>

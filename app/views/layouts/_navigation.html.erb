@@ -1,6 +1,9 @@
 <div class="navbar">
-  <%= link_to '首页', root_path, :class => 'brand'  %>
+
   <ul class="nav nav-pills nav-stacked">
+    <li <% if @active_home-%> class='active' <% end -%>>
+      <%= link_to '首页', '/home', :class => 'brand'  %>
+    </li>
     <li <% if @active_find-%> class='active' <% end -%>>
       <%= link_to '找到一本适合孩子读的书', root_path  %>
     </li>

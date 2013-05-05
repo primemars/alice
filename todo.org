@@ -1,8 +1,13 @@
 #+SEQ_TODO: TODO WAITING DONE
 (load-file "tools.el")
 
-* TODO Implment the home page
-* TODO Improve the result of find
+* DONE Improve the result of find
+* TODO Deploy the code in the public server
+* DONE Implment the home page
 * TODO Implement the 小学分级阅读标准核心
 * TODO Small change on the other pages
-* TODO Deploy the code in the public server
+* WAITING Improve the internal logic of creating an article
+  Cannot find a proper solution now
+  1. Need store the fresh txt file
+  2. Donot need store the txt file which exist already
+  3. Cannot find an identifier to distinguish the txt file

@@ -2,15 +2,20 @@ require File.join(File.dirname(__FILE__), '/../../lib/grade/lib/grader')
 class Article < ActiveRecord::Base
   attr_accessible :avatar, :filename
   has_attached_file :avatar
-
+  validates_attachment :avatar,  :presence => true,
+  :content_type => { :content_type => "text/plain" },
+  :size => { :in => 0..10.kilobytes }
 
   def grade
     pattern_file = 'lib/grade/result/pattern/pattern_article/2000'
     @total, @bad_words = Grader.grade(pattern_file, avatar.path)
-    @good_word_percentage = ((Float(@total-@bad_words.length)/@total)*100).round(3)
+  
     return self
   end
 
+  def name
+    filename.sub('.txt', '')
+  end
 
   def filename
     avatar_file_name
@@ -20,8 +25,12 @@ class Article < ActiveRecord::Base
     @bad_words
   end
 
+  def bad_word_percentage
+    ((Float(@bad_words.length)/@total)*100).round(3)
+  end
+
   def good_word_percentage
-    @good_word_percentage
+    ((Float(@total-@bad_words.length)/@total)*100).round(3)
   end
 
   def total
