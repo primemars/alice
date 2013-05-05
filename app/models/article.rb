@@ -5,11 +5,9 @@ class Article < ActiveRecord::Base
   validates_attachment :avatar,  :presence => true,
   :content_type => { :content_type => "text/plain" },
   :size => { :in => 0..10.kilobytes }
-
+  PATTERN_FILE = 'lib/grade/result/pattern/pattern_article/2000'
   def grade
-    pattern_file = 'lib/grade/result/pattern/pattern_article/2000'
-    @total, @bad_words = Grader.grade(pattern_file, avatar.path)
-  
+    @total, @bad_words = Grader.grade(PATTERN_FILE, avatar.path)
     return self
   end
 

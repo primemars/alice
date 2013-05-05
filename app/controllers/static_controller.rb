@@ -2,7 +2,7 @@ class StaticController < ApplicationController
   def show_home
     @active_home = true
   end
-  
+
   def show_importance
     @active_importance = true
   end
@@ -13,5 +13,10 @@ class StaticController < ApplicationController
 
   def show_advantage
     @active_standard = true
+  end
+
+  def show_pattern
+    @active_standard = true
+    @patterns = File.read(Article::PATTERN_FILE).split("\n")
   end
 end

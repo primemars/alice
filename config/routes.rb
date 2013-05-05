@@ -57,6 +57,7 @@ Alice::Application.routes.draw do
   match '/importance'  => 'static#show_importance'
   match '/introduction'  => 'static#show_introduction'
   match '/advantage'  => 'static#show_advantage'
+  match '/pattern'  => 'static#show_pattern'
 
   # See how all your routes lay out with "rake routes"
 
