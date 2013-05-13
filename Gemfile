@@ -8,8 +8,8 @@ gem 'rails', '3.2.12'
 gem 'sqlite3'
 
 gem 'paperclip'
+gem 'therubyracer'
 
-gem 'ruby-debug19'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,6 +21,10 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+end
+
+group :development, :test do
+  gem 'ruby-debug19'
 end
 
 gem 'jquery-rails'
