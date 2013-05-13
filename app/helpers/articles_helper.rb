@@ -1,18 +1,19 @@
 # -*- coding: utf-8 -*-
 module ArticlesHelper
   def show_stars(bad_word_percentage)
+    contennt = ""
     star = image_tag('/assets/star.png')
     star_off = image_tag('/assets/star-off.png')
     if bad_word_percentage < 3
-      star * 5
+      content = star * 5
     elsif bad_word_percentage < 5
-      star * 4 + star_off
+      content = star * 4 + star_off
     elsif bad_word_percentage < 8
-      star * 3 + star_off * 2
+      content = star * 3 + star_off * 2
     elsif bad_word_percentage < 10
-      star * 2 + star_off * 3
+      content = star * 2 + star_off * 3
     else
-      star + star_off * 4
+      content = star + star_off * 4
     end
   end
   

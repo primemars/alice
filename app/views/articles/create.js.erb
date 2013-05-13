@@ -1,4 +1,3 @@
-
-jQuery('#result').html('<%= article_result @article %>');
+jQuery('#result').html('<%= raw (article_result @article) %>');
 
 
