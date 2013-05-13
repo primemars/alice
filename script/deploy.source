@@ -1,0 +1,4 @@
+APP_PATH=/home/sutifang/webapps/alice
+export GEM_HOME=$APP_PATH/gems
+export RUBYLIB=$APP_PATH/lib
+export PATH=$APP_PATH/bin:$PATH
