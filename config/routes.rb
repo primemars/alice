@@ -1,4 +1,6 @@
 Alice::Application.routes.draw do
+  devise_for :users
+
   get "welcome/index"
   resources :articles
 
@@ -52,12 +54,13 @@ Alice::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'welcome#index'
+  root :to => 'static#show_home'
   match '/home'  => 'static#show_home'
   match '/importance'  => 'static#show_importance'
   match '/introduction'  => 'static#show_introduction'
   match '/advantage'  => 'static#show_advantage'
   match '/pattern'  => 'static#show_pattern'
+  match '/calc' => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

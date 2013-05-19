@@ -9,6 +9,7 @@ gem 'sqlite3'
 
 gem 'paperclip'
 gem 'therubyracer'
+gem 'devise'
 
 
 # Gems used only for assets and not required

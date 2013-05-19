@@ -1,4 +1,5 @@
 class StaticController < ApplicationController
+    before_filter :authenticate_user!, :except => :show_home
   def show_home
     @active_home = true
   end
